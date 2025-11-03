@@ -8,7 +8,7 @@ const Footer = () => {
     product: [
       { name: "Packs BIOS", href: "/packs" },
       { name: "Fonctionnement", href: "/fonctionnement" },
-      { name: "Comparatif GTB", href: "/#comparaison" },
+      { name: "Comparatif GTB", href: "/comparaison" },
     ],
     support: [
       { name: "Documentation", href: "/fonctionnement" },
@@ -16,7 +16,7 @@ const Footer = () => {
       { name: "Support technique", href: "/contact" },
     ],
     company: [
-      { name: "Qui sommes-nous", href: "/#about" },
+      { name: "Qui sommes-nous", href: "/about" },
       { name: "Partenaires", href: "/partenaires" },
       { name: "Contact", href: "/contact" },
     ]

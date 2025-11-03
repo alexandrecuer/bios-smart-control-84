@@ -5,15 +5,14 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/bios-smart-control-84/',
+  base: mode === 'production' ? '/bios-smart-control-84/' : '/',
   server: {
     host: "::",
-    port: 8080,
+    port: 5173,
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {

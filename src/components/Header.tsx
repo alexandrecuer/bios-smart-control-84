@@ -1,15 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Settings, Cpu, Users, Phone } from "lucide-react";
+import { Menu, X, Settings, Cpu, Users, Phone, Bug } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
     { name: "Accueil", href: "/", icon: Settings },
-    { name: "Packs BIOS", href: "/packs", icon: Cpu },
+    { name: "Problématique", href: "/problem", icon: Bug },
+    { name: "BIOS", href: "/solution", icon: Bug },
     { name: "Fonctionnement", href: "/fonctionnement", icon: Settings },
+    { name: "Packs", href: "/packs", icon: Cpu },
+    
     { name: "Partenaires", href: "/partenaires", icon: Users },
     { name: "Contact", href: "/contact", icon: Phone },
   ];
