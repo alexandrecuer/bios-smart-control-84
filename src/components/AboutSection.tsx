@@ -54,7 +54,7 @@ const AboutSection = () => {
           </div>
 
           {/* Team/Company Info */}
-          <div className="bg-muted/30 rounded-xl p-8">
+          <div className="bg-background rounded-xl p-8">
             <h3 className="text-2xl font-bold text-foreground mb-6">L'équipe BIOS</h3>
             
             <div className="space-y-6">
@@ -100,6 +100,13 @@ const AboutSection = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="relative flex justify-center items-end">
+          <img 
+            src="images/pump.png" 
+            alt="Décoration" 
+            className="w-4/5 md:w-3/5 max-w-[600px] filter grayscale opacity-60 object-contain" 
+          />
         </div>
       </div>
     </section>
