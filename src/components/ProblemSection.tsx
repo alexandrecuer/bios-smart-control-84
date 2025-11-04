@@ -12,7 +12,7 @@ const ProblemSection = () => {
       icon: AlertTriangle,
       title: "Pas de données",
       description: "Impossible de savoir ce qui consomme, quand et pourquoi. Aucune visibilité sur les performances.",
-      color: "bg-amber-50"
+      color: "bg-yellow-50"
     },
     {
       icon: HelpCircle,
