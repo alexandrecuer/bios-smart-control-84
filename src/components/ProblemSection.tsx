@@ -5,17 +5,20 @@ const ProblemSection = () => {
     {
       icon: TrendingDown,
       title: "Pas de pilotage",
-      description: "Chauffage à fond l'hiver, climatisation en permanence l'été. Gaspillage énergétique constant."
+      description: "Chauffage à fond l'hiver, climatisation en permanence l'été. Gaspillage énergétique constant.",
+      color: "bg-red-50"
     },
     {
       icon: AlertTriangle,
       title: "Pas de données",
-      description: "Impossible de savoir ce qui consomme, quand et pourquoi. Aucune visibilité sur les performances."
+      description: "Impossible de savoir ce qui consomme, quand et pourquoi. Aucune visibilité sur les performances.",
+      color: "bg-amber-50"
     },
     {
       icon: HelpCircle,
       title: "Pas de support",
-      description: "En cas de panne, c'est l'urgence. Aucun diagnostic préventif, maintenance uniquement curative."
+      description: "En cas de panne, c'est l'urgence. Aucun diagnostic préventif, maintenance uniquement curative.",
+      color: "bg-green-50"
     }
   ];
 
@@ -36,7 +39,7 @@ const ProblemSection = () => {
           {problems.map((problem, index) => (
             <div 
               key={index}
-              className="bg-card rounded-xl p-8 shadow-card-industrial border border-border hover:shadow-industrial transition-shadow duration-300"
+              className={`bg-card ${problem.color} rounded-xl p-8 shadow-card-industrial border border-border hover:shadow-industrial transition-shadow duration-300`}
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mb-6">
@@ -64,7 +67,7 @@ const ProblemSection = () => {
             <div className="text-sm text-muted-foreground">de surconsommation énergétique</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">2h</div>
+            <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">24h</div>
             <div className="text-sm text-muted-foreground">pour identifier une panne</div>
           </div>
           <div className="text-center">
