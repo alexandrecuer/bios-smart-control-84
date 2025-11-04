@@ -32,7 +32,7 @@ const Footer = () => {
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
                 <Settings className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">BIOS</span>
+              <span className="text-xl font-bold">Open Building Management</span>
             </div>
             <p className="text-gray-300 mb-6">
               La régulation intelligente pour les bâtiments oubliés de la GTB.
@@ -109,9 +109,12 @@ const Footer = () => {
         <div className="border-t border-gray-600 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-gray-300">
-              © {currentYear} BIOS. Tous droits réservés.
+              © {currentYear} OBM. Tous droits réservés.
             </div>
             <div className="flex space-x-6 text-sm text-gray-300">
+              <Link to="http://github.com/open-building-management" className="hover:text-white transition-colors duration-200">
+                GitHub
+              </Link>
               <Link to="/mentions-legales" className="hover:text-white transition-colors duration-200">
                 Mentions légales
               </Link>
