@@ -159,7 +159,7 @@ const DigitalTwinSection = () => {
         </div>
         <div className="relative flex justify-center items-end">
           <img 
-            src="/images/pump.png" 
+            src="images/pump.png" 
             alt="Décoration" 
             className="w-4/5 md:w-3/5 max-w-[600px] filter grayscale opacity-60 object-contain" 
           />
