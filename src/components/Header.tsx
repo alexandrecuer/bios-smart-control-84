@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Settings, Cpu, Users, Phone, Bug } from "lucide-react";
-import logoA from '/public/logoA.svg';
+import logoA from '/logoA.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
