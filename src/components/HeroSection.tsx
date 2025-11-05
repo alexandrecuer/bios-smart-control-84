@@ -11,9 +11,9 @@ const HeroSection = () => {
   return (
     <section className="py-6 lg:py-12 bg-background">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-center">
+        <div className="grid lg:grid-cols-[1fr_2fr] items-center">
           {/* Content */}
-          <div className="animate-fade-in">
+          <div className="animate-fade-in gap-0 sm-gap-12">
             <h1 className="text-4xl lg:text-6xl mb-6 font-bold text-foreground">
               La régulation intelligente pour les bâtiments oubliés de la GTB
             </h1>
@@ -23,8 +23,8 @@ const HeroSection = () => {
             </p>
           </div>
           {/* Visual Element */}
-          <div className="relative animate-slide-in-right">
-            <div className="grid lg:grid-cols-2">
+          <div className="relative animate-slide-in-right ">
+            <div className="grid lg:grid-cols-2 gap-12 sm-gap-0">
               <div>
                 <img src="images/bios_2023_transp.png" />
               </div>
