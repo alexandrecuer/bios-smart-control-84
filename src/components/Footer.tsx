@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary dark:bg-gray-900 rounded-md flex items-center justify-center">
                 <Settings className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">Open Building Management</span>
