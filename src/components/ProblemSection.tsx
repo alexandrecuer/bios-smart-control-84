@@ -6,19 +6,19 @@ const ProblemSection = () => {
       icon: TrendingDown,
       title: "Pas de pilotage",
       description: "Chauffage à fond l'hiver, climatisation en permanence l'été. Gaspillage énergétique constant.",
-      color: "bg-red-50"
+      color: "bg-red-500/20"
     },
     {
       icon: AlertTriangle,
       title: "Pas de données",
       description: "Impossible de savoir ce qui consomme, quand et pourquoi. Aucune visibilité sur les performances.",
-      color: "bg-yellow-50"
+      color: "bg-yellow-500/20"
     },
     {
       icon: HelpCircle,
       title: "Pas de support",
       description: "En cas de panne, c'est l'urgence. Aucun diagnostic préventif, maintenance uniquement curative.",
-      color: "bg-green-50"
+      color: "bg-green-500/20"
     }
   ];
 
@@ -42,7 +42,7 @@ const ProblemSection = () => {
               className={`bg-card ${problem.color} rounded-xl p-8 shadow-card-industrial border border-border hover:shadow-industrial transition-shadow duration-300`}
             >
               <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-destructive/10 rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-6">
                   <problem.icon className="w-8 h-8 text-destructive" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">

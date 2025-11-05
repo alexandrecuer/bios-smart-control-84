@@ -88,13 +88,6 @@ const SolutionSection = () => {
             </div>
           </div>
         </div>
-        <div className="relative flex justify-center items-end">
-          <img 
-            src="images/v3v.png" 
-            alt="Décoration" 
-            className="w-4/5 md:w-3/5 max-w-[600px] filter grayscale opacity-60 object-contain" 
-          />
-        </div>
       </div>
     </section>
   );
