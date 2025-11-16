@@ -50,40 +50,64 @@ const SolutionSection = () => {
                   </div>
                 </div>
               ))}
+              <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground">
+                <div className="flex bg-gray-300 dark:bg-transparent justify-center p-4"><img src="images/sud_d3histo.svg" /></div>
+              </div>
             </div>
           </div>
 
           {/* Visual */}
-          <div className="relative">
+          <div className="relative space-y-6">
             <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground">
               <h3 className="text-2xl font-bold mb-6">BIOS en action</h3>
-              
               <div className="space-y-4">
+                <div className="bg-green-500/80 rounded-lg p-4 border border-white/20">
+                  <div className="text-sm opacity-80">
+                      Il est 13h, dimanche 16/11/2025  - retour des occupants prévu dans 18 heures
+                  </div>
+                </div>
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm">Chaufferie Collège</span>
-                    <span className="text-sm bg-green-500/20 px-2 py-1 rounded">● Actif</span>
+                    <span className="text-2xl font-bold">circuit sud</span>
+                    <span className="text-sm bg-green-500/20 px-2 py-1 rounded">● pilot IA actif</span>
                   </div>
-                  <div className="text-2xl font-bold">19.5°C</div>
-                  <div className="text-sm opacity-80">Température cible: 20°C</div>
+                  <div className="text-sm opacity-80">✅ Consigne de confort : 20°C
+                  </div>
+                  <div className="text-sm opacity-80">✅ Température intérieure : 18.70 °C (age 169s)</div>
+                  <div className="text-sm opacity-80">✅ Température extérieure : 14.93 °C (age 39s)</div>
+                  <div className="text-sm opacity-80">💡 Situation actuelle - chauffage : 0</div>
+                  <div className="text-sm opacity-80">💡 Décision de l'IA - chauffage : 0</div>
+                  <div className="text-sm opacity-80 bg-red-500/20 font-bold">
+                    Le système de chauffage est peu puissant: 
+                    il faudra plusieurs heures pour atteindre la consigne même si l'écart peut sembler faible.
+                  </div>
+                  <div className="text-sm opacity-80">
+                    🎯 L'IA ne prévoit pas de relancer le chauffage avant 20h ce soir.
+                  </div>
+                  <div className="text-sm opacity-80">
+                    🎯 Vu les prévisions météo, il est fort possible que la relance ait lieu plus tard dans la nuit.
+                  </div>
                 </div>
-
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm">Consommation gaz</span>
-                    <span className="text-sm text-green-400">-15%</span>
+                    <span className="text-2xl font-bold">circuit nord</span>
+                    <span className="text-sm bg-green-500/20 px-2 py-1 rounded">● pilot memory actif</span>
                   </div>
-                  <div className="text-2xl font-bold">245 kWh</div>
-                  <div className="text-sm opacity-80">vs semaine dernière</div>
-                </div>
-
-                <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm">Alerte maintenance</span>
-                    <span className="text-sm bg-orange-500/20 px-2 py-1 rounded">! Préventif</span>
+                  <div className="text-sm opacity-80">✅ Consigne de confort : 21°C
                   </div>
-                  <div className="text-sm">Filtre à changer dans 15 jours</div>
+                  <div className="text-sm opacity-80">✅ température intérieure : 17.00 °C (age 93s)</div>
+                  <div className="text-sm opacity-80">✅ Température extérieure : 14.93 °C (age 39s)</div>
+                  <div className="text-sm opacity-80">✅ la moyenne des prévisions de température extérieure d'içi le retour des occupants est de 10°C</div>
+                  <div className="text-sm opacity-80">💡 Décision de la mémoire - chauffage : 0</div>
+                  <div className="text-sm opacity-80">
+                    🎯 Vu la puissance du chauffage, relancer le chauffage une demi-heure avant le retour des occupants devrait suffire
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground">
+              <div className="flex bg-gray-300 dark:bg-gray-100 justify-center p-4">
+                <img src="images/sud_d3select_details.svg" />
               </div>
             </div>
           </div>
