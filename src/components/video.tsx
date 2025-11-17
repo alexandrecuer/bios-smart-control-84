@@ -4,7 +4,7 @@ import Plyr from "plyr";
 import "plyr/dist/plyr.css";
 
 interface HlsVideoProps {
-  src: string;
+  src: string; // "videos/add_service"
 }
 
 export default function HlsVideo({ src }: HlsVideoProps) {
@@ -14,41 +14,31 @@ export default function HlsVideo({ src }: HlsVideoProps) {
     const video = videoRef.current;
     if (!video) return;
 
-    // Required for autoplay on all browsers
-    video.muted = true;
+    const hlsSrc = `${src}/playlist.m3u8`;
+    const mp4Src = `${src}/video.mp4`;
 
-    let hls: Hls | null = null;
-    let player: Plyr | null = null;
-
-    // HLS support
+    // --- HLS.js on desktop browsers ---
     if (Hls.isSupported()) {
-      hls = new Hls();
-      hls.loadSource(src);
+      const hls = new Hls();
+      hls.loadSource(hlsSrc);
       hls.attachMedia(video);
-    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-      video.src = src; // For Safari
+    }
+    // --- Native HLS (iOS Safari, macOS Safari) ---
+    else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = hlsSrc;
+    }
+    // --- Fallback MP4 for Android Chrome + all non-HLS browsers ---
+    else {
+      video.src = mp4Src;
     }
 
-    // Plyr initialization (CSS required)
-    player = new Plyr(video, {
+    const player = new Plyr(video, {
       autoplay: true,
       muted: true,
       loop: { active: true }
     });
 
-    // Force looping manually (HLS + Plyr)
-    const handleEnded = () => {
-      video.currentTime = 0;
-      video.play();
-    };
-
-    video.addEventListener("ended", handleEnded);
-
-    return () => {
-      video.removeEventListener("ended", handleEnded);
-      if (hls) hls.destroy();
-      if (player) player.destroy();
-    };
+    return () => player.destroy();
   }, [src]);
 
   return (

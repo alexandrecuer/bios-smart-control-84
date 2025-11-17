@@ -36,15 +36,19 @@ const DigitalTwinSection = () => {
       description: "Anticipation des besoins selon les prévisions"
     },
     {
-      icon: Brain,
-      title: "Apprentissage usage",
-      description: "Modélisation des habitudes d'occupation"
-    },
-    {
       icon: Cloud,
       title: "Analyse continue",
-      description: "Algorithmes d'optimisation en temps réel"
-    }
+      description: "Optimisation des réglages en temps réel"
+    },
+    {
+      icon: Brain,
+      title: "Jumeau numérique intelligent et adaptatif",
+      description: [
+        "L'ambition d'Open Building Management est de recueillir des données signifiantes sur chaque type de bâtiment, ",
+        "en les classant suivant le niveau de performance de l'enveloppe et les puissances énergétiques disponibles. ",
+        "\n\nL'objectif est de développer une base de référence pour améliorer sans cesse nos algorithmes."
+      ]
+    },
   ];
 
   return (
@@ -52,72 +56,58 @@ const DigitalTwinSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Jumeau numérique intelligent et adaptatif
+            BIOS est un système d'exploitation totalement modulaire et extensible.
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            BIOS crée un modèle digital de votre bâtiment qui apprend en continu 
-            de l'environnement d'usage et des conditions extérieures pour proposer 
-            des optimisations automatiques.
-          </p>
+          <div className="text-xl text-muted-foreground max-w-5xl mx-auto">
+            Sa conception est prévue pour offrir une interopérabilité maximale avec les équipements du bâtiment.
+            <br></br>C'est un véritable système SCADA (système de contrôle et d’acquisition de données en temps réel)
+            <br></br>En matière de sécurité, toutes les bonnes pratiques sont respectées : isolation des processus, fonctionnement derrière un parefeu, chiffrement https
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Adaptive Features */}
-          <div>
-            <h3 className="text-2xl font-bold text-foreground mb-8">
-              Le système est totalement modulaire et extensible. Sa conception est prévue pour offrir une interopérabilité maximale. 
-            </h3>
-            <div className="space-y-6">
-              
-              <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
-                <h4 className="text-xl font-bold mb-6 flex items-center">
-                  Vous souhaitez seulement réaliser du monitoring depuis des capteurs filaires ou radio.
-                </h4>
-                <div className="text-sm">
+          <div className="space-y-6">
+            <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
+                <div className="text-md">
+                  Vous souhaitez un monitoring depuis des capteurs filaires ou radio.
                   Pas de problème. Choisissez tout simplement la marque et le type de module.
                 </div>
                 <div className="flex bg-white dark:bg-gray-100 justify-center p-4">
-                  <HlsVideo src="videos/add_module/playlist.m3u8" />
+                  <HlsVideo src="videos/add_pm8tc" />
                 </div>
-              </div>
-              <p className="text-muted-foreground leading-relaxed">
-                Vous voulez interroger une API web parce que vous avez constaté qu'une grandeur vous manque. Vous pouvez le faire à tout moment. 
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Pour piloter votre bâtiment, utilisez notre bibliothèque d'algorithmes, enrichissez votre système avec des plugins prêts à télécharger 
-                et développez vos propres routines, par exemple si certains équipements ne sont pas encore reconnus par notre base de code. 
-              </p>
-
-              {adaptiveFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
-                    <p className="text-muted-foreground">{feature.description}</p>
-                  </div>
+            </div>
+            <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
+                <div className="text-md">
+                  Pour piloter votre bâtiment, utilisez notre bibliothèque d'algorithmes, enrichissez votre système avec des plugins prêts à télécharger 
+                  et développez vos propres routines, par exemple si certains équipements ne sont pas encore reconnus par notre base de code. 
                 </div>
-              ))}
+                <div className="flex bg-white dark:bg-gray-100 justify-center p-4">
+                  <HlsVideo src="videos/docker_download" />
+                </div>
             </div>
           </div>
 
           {/* Digital Twin Visualization */}
-          <div className="relative">
-            <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground">
-              <div className="space-y-4">
-                <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <HlsVideo src="videos/add_service/playlist.m3u8" />
-                  </div>
+          <div className="relative space-y-12">
+            {adaptiveFeatures.map((feature, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <feature.icon className="w-6 h-6 text-primary" />
                 </div>
-
-                <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <HlsVideo src="videos/docker_download/playlist.m3u8" />
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
+                  <div className="whitespace-pre-line text-muted-foreground">{feature.description}</div>
                 </div>
-
+              </div>
+            ))}
+            <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
+              <div className="text-md">
+                Vous avez constaté qu'une grandeur vous manque et vous voulez interroger une API web ?
+                Vous pouvez le faire à tout moment. 
+              </div>
+              <div className="flex bg-white dark:bg-gray-100 justify-center p-4">
+                <HlsVideo src="videos/add_service" />
               </div>
             </div>
           </div>
@@ -126,7 +116,7 @@ const DigitalTwinSection = () => {
         {/* Cost Optimization Benefits */}
         <div>
           <h3 className="text-2xl font-bold text-foreground text-center mb-12">
-            Bénéfices
+            Bénéfices majeurs
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
