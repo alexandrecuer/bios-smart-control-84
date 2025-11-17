@@ -77,7 +77,7 @@ const DigitalTwinSection = () => {
                   Pas de problème. Choisissez tout simplement la marque et le type de module.
                 </div>
                 <div className="flex bg-white dark:bg-gray-100 justify-center p-4">
-                  <HlsVideo src="/videos/add_module/playlist.m3u8" />
+                  <HlsVideo src="videos/add_module/playlist.m3u8" />
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed">
@@ -108,13 +108,13 @@ const DigitalTwinSection = () => {
               <div className="space-y-4">
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between mb-2">
-                    <HlsVideo src="/videos/add_service/playlist.m3u8" />
+                    <HlsVideo src="videos/add_service/playlist.m3u8" />
                   </div>
                 </div>
 
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between mb-2">
-                    <HlsVideo src="/videos/docker_download/playlist.m3u8" />
+                    <HlsVideo src="videos/docker_download/playlist.m3u8" />
                   </div>
                 </div>
 
