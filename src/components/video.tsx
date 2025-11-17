@@ -3,7 +3,6 @@ import Hls from "hls.js";
 import Plyr from "plyr";
 import "plyr/dist/plyr.css";
 
-// video.tsx
 interface HlsVideoProps {
   src: string;
 }
@@ -15,17 +14,42 @@ export default function HlsVideo({ src }: HlsVideoProps) {
     const video = videoRef.current;
     if (!video) return;
 
+    // Required for autoplay on all browsers
+    video.muted = true;
+
+    let hls: Hls | null = null;
+    let player: Plyr | null = null;
+
+    // HLS support
     if (Hls.isSupported()) {
-      const hls = new Hls();
+      hls = new Hls();
       hls.loadSource(src);
       hls.attachMedia(video);
     } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-      video.src = src;
+      video.src = src; // For Safari
     }
 
-    const player = new Plyr(video);
-    return () => player.destroy();
+    // Plyr initialization (CSS required)
+    player = new Plyr(video, {
+      autoplay: true,
+      muted: true,
+      loop: { active: true }
+    });
+
+    // Force looping manually (HLS + Plyr)
+    const handleEnded = () => {
+      video.currentTime = 0;
+      video.play();
+    };
+
+    video.addEventListener("ended", handleEnded);
+
+    return () => {
+      video.removeEventListener("ended", handleEnded);
+      if (hls) hls.destroy();
+      if (player) player.destroy();
+    };
   }, [src]);
 
-  return <video ref={videoRef} autoPlay loop controls />;
+  return <video ref={videoRef} autoPlay muted playsInline loop controls />;
 }
