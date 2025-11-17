@@ -1,11 +1,12 @@
 import { Brain, TrendingDown, Leaf, Zap, ThermometerSun, Cloud } from "lucide-react";
+import HlsVideo from "./video";
 
 const DigitalTwinSection = () => {
   const benefits = [
     {
       icon: TrendingDown,
       title: "Réduction coût opérationnel",
-      description: "Maintenance prédictive et optimisation des interventions",
+      description: "Facilitation de la maintenance prédictive et optimisation des interventions",
       metric: "-25%",
       unit: "soit 3 200€/an",
       color: "text-blue-500"
@@ -64,9 +65,29 @@ const DigitalTwinSection = () => {
           {/* Adaptive Features */}
           <div>
             <h3 className="text-2xl font-bold text-foreground mb-8">
-              Adaptation intelligente
+              Le système est totalement modulaire et extensible. Sa conception est prévue pour offrir une interopérabilité maximale. 
             </h3>
             <div className="space-y-6">
+              
+              <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
+                <h4 className="text-xl font-bold mb-6 flex items-center">
+                  Vous souhaitez seulement réaliser du monitoring depuis des capteurs filaires ou radio.
+                </h4>
+                <div className="text-sm">
+                  Pas de problème. Choisissez tout simplement la marque et le type de module.
+                </div>
+                <div className="flex bg-white dark:bg-gray-100 justify-center p-4">
+                  <HlsVideo src="/videos/add_module/playlist.m3u8" />
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Vous voulez interroger une API web parce que vous avez constaté qu'une grandeur vous manque. Vous pouvez le faire à tout moment. 
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Pour piloter votre bâtiment, utilisez notre bibliothèque d'algorithmes, enrichissez votre système avec des plugins prêts à télécharger 
+                et développez vos propres routines, par exemple si certains équipements ne sont pas encore reconnus par notre base de code. 
+              </p>
+
               {adaptiveFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -84,38 +105,19 @@ const DigitalTwinSection = () => {
           {/* Digital Twin Visualization */}
           <div className="relative">
             <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground">
-              <h4 className="text-xl font-bold mb-6 flex items-center">
-                <Brain className="w-5 h-5 mr-2" />
-                IA en apprentissage
-              </h4>
-              
               <div className="space-y-4">
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm">Prédiction consommation</span>
-                    <span className="text-sm bg-green-500/20 px-2 py-1 rounded">● Actif</span>
+                    <HlsVideo src="/videos/add_service/playlist.m3u8" />
                   </div>
-                  <div className="text-lg font-bold">Demain: 320 kWh</div>
-                  <div className="text-xs opacity-80">vs 450 kWh prévu initialement</div>
                 </div>
 
                 <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm">Maintenance prédictive</span>
-                    <span className="text-sm bg-orange-500/20 px-2 py-1 rounded">! Recommandation</span>
+                    <HlsVideo src="/videos/docker_download/playlist.m3u8" />
                   </div>
-                  <div className="text-sm">Nettoyage filtres CTA dans 8 jours</div>
-                  <div className="text-xs opacity-80">Économie estimée: 45€/mois</div>
                 </div>
 
-                <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm">Optimisation horaires</span>
-                    <span className="text-sm text-blue-400">💡 Suggestion</span>
-                  </div>
-                  <div className="text-sm">Démarrage retardé de 30min demain</div>
-                  <div className="text-xs opacity-80">Motif: occupation faible prévue</div>
-                </div>
               </div>
             </div>
           </div>
@@ -124,7 +126,7 @@ const DigitalTwinSection = () => {
         {/* Cost Optimization Benefits */}
         <div>
           <h3 className="text-2xl font-bold text-foreground text-center mb-12">
-            Axes d'amélioration proposés automatiquement
+            Bénéfices
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -146,13 +148,7 @@ const DigitalTwinSection = () => {
                 
                 <h4 className="font-semibold text-foreground mb-3">{benefit.title}</h4>
                 <p className="text-muted-foreground text-sm">{benefit.description}</p>
-                
-                <div className="mt-4 pt-4 border-t border-border">
-                  <div className="flex items-center text-xs text-muted-foreground">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                    Optimisation continue active
-                  </div>
-                </div>
+
               </div>
             ))}
           </div>
