@@ -51,5 +51,16 @@ export default function HlsVideo({ src }: HlsVideoProps) {
     };
   }, [src]);
 
-  return <video ref={videoRef} preload="auto" autoPlay muted playsInline loop controls />;
+  return (
+    <video
+      ref={videoRef}
+      preload="auto"
+      autoPlay
+      muted
+      playsInline
+      webkit-playsinline
+      loop
+      controls
+    />
+  );
 }
