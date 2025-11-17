@@ -54,6 +54,8 @@ export default function HlsVideo({ src }: HlsVideoProps) {
       webkit-playsinline
       loop
       controls
-    />
+    >
+      <source src={`${src}/video.mp4`} type="video/mp4" />
+    </video>
   );
 }
