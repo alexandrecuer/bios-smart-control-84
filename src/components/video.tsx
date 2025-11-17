@@ -3,6 +3,8 @@ import Hls from "hls.js";
 import Plyr from "plyr";
 import "plyr/dist/plyr.css";
 
+const isAndroid = /Android/i.test(navigator.userAgent);
+
 interface HlsVideoProps {
   src: string; // "videos/add_service"
 }
@@ -18,7 +20,7 @@ export default function HlsVideo({ src }: HlsVideoProps) {
     const mp4Src = `${src}/video.mp4`;
 
     // --- HLS.js on desktop browsers ---
-    if (Hls.isSupported()) {
+    if (!isAndroid && Hls.isSupported()) {
       const hls = new Hls();
       hls.loadSource(hlsSrc);
       hls.attachMedia(video);
