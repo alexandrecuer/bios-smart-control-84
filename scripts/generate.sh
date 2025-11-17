@@ -17,12 +17,11 @@ for file in *.webm; do
     "${filename}/playlist.m3u8"
 
   ffmpeg -i "$file" \
-    -an \
     -vf "scale=ceil(iw/2)*2:ceil(ih/2)*2" \
-    -vcodec libx264 -profile:v high -level 4.0 \
-    -pix_fmt yuv420p \
-    -preset veryslow \
+    -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p \
+    -preset slow \
     -b:v 1000k -maxrate 1200k -bufsize 2000k \
+    -c:a aac -b:a 64k -ac 1 \
     -movflags +faststart \
     "${filename}/video.mp4"
 
