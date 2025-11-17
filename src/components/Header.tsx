@@ -46,7 +46,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" asChild>
-              <Link to="/contact">Fiche produit</Link>
+              <a href="download/Bios_Datasheet_FR_2025.pdf">Fiche produit</a>
             </Button>
             <Button asChild>
               <Link to="/contact">Être rappelé</Link>

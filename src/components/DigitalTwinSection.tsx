@@ -69,7 +69,7 @@ const DigitalTwinSection = () => {
           {/* Adaptive Features */}
           <div className="space-y-6">
             <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
-                <div className="text-md">
+                <div className="bg-blue-400 dark:bg-blue-200 text-md rounded-xl p-4">
                   Vous souhaitez un monitoring depuis des capteurs filaires ou radio.
                   Pas de problème. Choisissez tout simplement la marque et le type de module.
                 </div>
@@ -78,12 +78,14 @@ const DigitalTwinSection = () => {
                 </div>
             </div>
             <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
-                <div className="text-md">
-                  Pour piloter votre bâtiment, utilisez notre bibliothèque d'algorithmes, enrichissez votre système avec des plugins prêts à télécharger 
-                  et développez vos propres routines, par exemple si certains équipements ne sont pas encore reconnus par notre base de code. 
+                <div className="bg-blue-400/50 dark:bg-blue-200 text-md rounded-xl p-4">
+                  Pour piloter votre bâtiment, utilisez notre bibliothèque d'algorithmes, enrichissez votre système avec des plugins prêts à télécharger.
                 </div>
                 <div className="flex bg-white dark:bg-gray-100 justify-center p-4">
                   <HlsVideo src="videos/docker_download" />
+                </div>
+                <div className="bg-green-500/20 dark:bg-blue-200 text-md rounded-xl p-4">
+                  Développez vos propres routines, par exemple si certains équipements ne sont pas encore reconnus par notre base de code. 
                 </div>
             </div>
           </div>
@@ -102,7 +104,7 @@ const DigitalTwinSection = () => {
               </div>
             ))}
             <div className="bg-gradient-hero rounded-2xl p-8 text-primary-foreground space-y-4">
-              <div className="text-md">
+              <div className="bg-blue-400 dark:bg-blue-200 text-md rounded-xl p-4">
                 Vous avez constaté qu'une grandeur vous manque et vous voulez interroger une API web ?
                 Vous pouvez le faire à tout moment. 
               </div>

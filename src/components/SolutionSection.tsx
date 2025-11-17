@@ -20,7 +20,7 @@ const SolutionSection = () => {
     {
       icon: Smartphone,
       title: "Installable en local",
-      description: "Votre chauffagiste local peut l'installer et l'entretenir"
+      description: "Votre chauffagiste local peut l'installer et en profiter"
     }
   ];
 
