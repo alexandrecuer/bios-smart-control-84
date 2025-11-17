@@ -13,6 +13,16 @@ interface HlsVideoProps {
 export default function HlsVideo({ src }: HlsVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  if (isMobile) {
+    return (
+      <img
+        src={`${src}/preview.webp`}
+        alt="Animation"
+        className="w-full h-auto rounded-lg"
+      />
+    );
+  }
+
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -21,7 +31,7 @@ export default function HlsVideo({ src }: HlsVideoProps) {
     const mp4Src = `${src}/video.mp4`;
 
     // --- HLS.js on desktop browsers ---
-    if (!isMobile && Hls.isSupported()) {
+    if (Hls.isSupported()) {
       const hls = new Hls();
       hls.loadSource(hlsSrc);
       hls.attachMedia(video);
@@ -30,7 +40,7 @@ export default function HlsVideo({ src }: HlsVideoProps) {
     else if (video.canPlayType("application/vnd.apple.mpegurl")) {
       video.src = hlsSrc;
     }
-    // --- Fallback MP4 for Android Chrome + all non-HLS browsers ---
+    // --- Fallback ---
     else {
       video.src = mp4Src;
     }
@@ -48,14 +58,12 @@ export default function HlsVideo({ src }: HlsVideoProps) {
     <video
       ref={videoRef}
       preload="auto"
+      webkit-playsinline="true"
       autoPlay
       muted
       playsInline
-      webkit-playsinline
       loop
       controls
-    >
-      <source src={`${src}/video.mp4`} type="video/mp4" />
-    </video>
+    />
   );
 }
