@@ -1,0 +1,25 @@
+{
+  "problem_section": {
+    "lost_buildings": "Smart building should benefit to everyone",
+    "description": [
+      "Colleges, gyms, small hospitals, senior living facilities... 80% of the real estate public portfolio",
+      "dont have access to a decent global management solution."
+    ],
+    "management": {
+      "title": "No energy management",
+      "description": "Full heating during winter, permanent air conditioning in summer. Constant energy waste."
+    },
+    "data": {
+      "title": "No data",
+      "description": "Impossible to understand what consumes, when and why. No visibility on performance."
+    },
+    "support": {
+      "title": "No support",
+      "description": "In the event of a breakdown, it's an emergency. No preventive diagnosis, only curative maintenance."
+    },
+    "no_BMS": "public buildings without BMS",
+    "waste": "of energy overconsumption",
+    "identify": "to identify a failure",
+    "consumption_data": "consumption data"
+  }
+}

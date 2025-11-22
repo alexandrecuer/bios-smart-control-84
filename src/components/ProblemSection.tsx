@@ -1,23 +1,25 @@
 import { AlertTriangle, TrendingDown, HelpCircle } from "lucide-react";
+import { tAuto } from "../i18n/i18n";
 
 const ProblemSection = () => {
+
   const problems = [
     {
       icon: TrendingDown,
-      title: "Pas de pilotage",
-      description: "Chauffage à fond l'hiver, climatisation en permanence l'été. Gaspillage énergétique constant.",
+      title: tAuto('problem_section.management.title'),
+      description: tAuto('problem_section.management.description'),
       color: "bg-red-500/20"
     },
     {
       icon: AlertTriangle,
-      title: "Pas de données",
-      description: "Impossible de savoir ce qui consomme, quand et pourquoi. Aucune visibilité sur les performances.",
+      title: tAuto('problem_section.data.title'),
+      description: tAuto('problem_section.data.description'),
       color: "bg-yellow-500/20"
     },
     {
       icon: HelpCircle,
-      title: "Pas de support",
-      description: "En cas de panne, c'est l'urgence. Aucun diagnostic préventif, maintenance uniquement curative.",
+      title: tAuto("problem_section.support.title"),
+      description: tAuto("problem_section.support.description"),
       color: "bg-green-500/20"
     }
   ];
@@ -27,11 +29,10 @@ const ProblemSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-            Les bâtiments oubliés de la GTB
+            {tAuto('problem_section.lost_buildings')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Collèges, gymnases, petits hôpitaux, EHPAD... Ces bâtiments représentent 80% du parc immobilier public 
-            mais restent sans pilotage énergétique faute de solutions adaptées.
+            {tAuto('problem_section.description')}
           </p>
         </div>
 
@@ -60,19 +61,19 @@ const ProblemSection = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">80%</div>
-            <div className="text-sm text-muted-foreground">des bâtiments publics sans GTB</div>
+            <div className="text-sm text-muted-foreground">{tAuto("problem_section.no_BMS")}</div>
           </div>
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">+30%</div>
-            <div className="text-sm text-muted-foreground">de surconsommation énergétique</div>
+            <div className="text-sm text-muted-foreground">{tAuto("problem_section.waste")}</div>
           </div>
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">24h</div>
-            <div className="text-sm text-muted-foreground">pour identifier une panne</div>
+            <div className="text-sm text-muted-foreground">{tAuto("problem_section.identify")}</div>
           </div>
           <div className="text-center">
             <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">0</div>
-            <div className="text-sm text-muted-foreground">données de consommation</div>
+            <div className="text-sm text-muted-foreground">{tAuto("problem_section.consumption_data")}</div>
           </div>
         </div>
       </div>

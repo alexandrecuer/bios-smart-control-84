@@ -1,0 +1,25 @@
+{
+  "problem_section": {
+    "lost_buildings": "Les bâtiments oubliés de la GTB",
+    "description": [
+      "collèges, gymnases, petits hôpitaux, EHPAD... Ces bâtiments représentent 80% du parc immobilier public",
+      "mais restent sans pilotage énergétique faute de solutions adaptées."
+    ],
+    "management": {
+      "title": "Pas de pilotage",
+      "description": "Chauffage à fond l'hiver, climatisation en permanence l'été. Gaspillage énergétique constant."
+    },
+    "data": {
+      "title": "Pas de données",
+      "description": "Impossible de savoir ce qui consomme, quand et pourquoi. Aucune visibilité sur les performances."
+    },
+    "support": {
+      "title": "Pas de support",
+      "description": "En cas de panne, c'est l'urgence. Aucun diagnostic préventif, maintenance uniquement curative."
+    },
+    "no_BMS": "des bâtiments publics sans GTB",
+    "waste": "de surconsommation énergétique",
+    "identify": "pour identifier une panne",
+    "consumption_data": "données de consommation"
+  }
+}
