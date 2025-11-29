@@ -13,7 +13,6 @@ const Header = () => {
     { name: "Problématique", href: "/problem", icon: Bug },
     { name: "BIOS", href: "/solution", icon: Bug },
     { name: "Fonctionnement", href: "/fonctionnement", icon: Settings },
-    { name: "Packs", href: "/packs", icon: Cpu },
     { name: "Partenaires", href: "/partenaires", icon: Users },
     { name: "Contact", href: "/contact", icon: Phone },
   ];

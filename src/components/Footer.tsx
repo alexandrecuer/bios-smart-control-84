@@ -6,7 +6,6 @@ const Footer = () => {
 
   const footerLinks = {
     product: [
-      { name: "Packs BIOS", href: "/packs" },
       { name: "Fonctionnement", href: "/fonctionnement" },
       { name: "Comparatif GTB", href: "/comparaison" },
     ],
